@@ -1,0 +1,48 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --search-border: rgb(150, 194, 248);
+}
+
+.hide {
+  border: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  padding: 2em;
+  width: 80%;
+  margin: auto;
+  min-width: 320px;
+}
+
+.search-bar {
+  width: 30%;
+  line-height: 2;
+  border: 1px solid var(--search-border);
+  transition: all 0.3s;
+}
+
+.search-bar:focus {
+  width: 100%;
+  border-color: rgb(151, 7, 7);
+}
+
+.search-bar::placeholder {
+  color: rgb(170, 170, 170);
+  font-weight: bold;
+}
+
+.search-bar:focus::placeholder {
+  color: transparent;
+}
